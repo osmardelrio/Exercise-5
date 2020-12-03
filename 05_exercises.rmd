@@ -268,8 +268,6 @@ knitr::include_graphics("Question_4.gif")
 ```{r}
 bike_image <- "https://raw.githubusercontent.com/llendway/animation_and_interactivity/master/bike.png"
 
-#was unable to upload files in png format for the running and swimming icons (would not let me do it from downloads either)
-
 panama_map <- get_stamenmap(bbox = c(left = -79.58, bottom = 8.9, right = -79.46, top = 9),
                             maptype = "terrain",
                             zoom = 13)
@@ -293,16 +291,6 @@ geom_image(data = panama_bike,
            aes(x = lon, 
                y = lat,
                image = bike_image), 
-           size = 0.1) +
-geom_image(data = panama_run,
-           aes(x = lon, 
-               y = lat,
-               image = run_image), 
-           size = 0.1) +
-geom_image(data = panama_swim,
-           aes(x = lon, 
-               y = lat,
-               image = swim_image), 
            size = 0.1) +
 labs(title = "Heather Lendway's Triathalon Journey",
      subtitle = "Date: {frame_along}") +
